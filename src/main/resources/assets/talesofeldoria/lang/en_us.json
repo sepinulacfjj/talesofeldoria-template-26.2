@@ -1,0 +1,13 @@
+{
+  "itemGroup.talesofeldoria": "Example Mod Tab",
+  "block.talesofeldoria.example_block": "Example Block",
+  "item.talesofeldoria.example_item": "Example Item",
+
+  "talesofeldoria.configuration.title": "Tales of Eldoria Configs",
+  "talesofeldoria.configuration.section.talesofeldoria.common.toml": "Tales of Eldoria Configs",
+  "talesofeldoria.configuration.section.talesofeldoria.common.toml.title": "Tales of Eldoria Configs",
+  "talesofeldoria.configuration.items": "Item List",
+  "talesofeldoria.configuration.logDirtBlock": "Log Dirt Block",
+  "talesofeldoria.configuration.magicNumberIntroduction": "Magic Number Text",
+  "talesofeldoria.configuration.magicNumber": "Magic Number"
+}
