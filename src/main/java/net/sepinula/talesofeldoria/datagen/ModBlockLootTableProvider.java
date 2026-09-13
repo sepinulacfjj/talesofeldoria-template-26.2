@@ -46,6 +46,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.VERDIGRIS_END_ORE.get(),
                 createMultipleOreDrops(ModBlocks.VERDIGRIS_END_ORE.get(), ModItems.RAW_VERDIGRIS.get(), 5, 9));
 
+        dropSelf(ModBlocks.VERDANT_STAIRS.get());
+        add(ModBlocks.VERDANT_SLAB.get(), this::createSlabItemTable);
+
+        dropSelf(ModBlocks.VERDANT_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.VERDANT_BUTTON.get());
+        dropSelf(ModBlocks.VERDANT_FENCE.get());
+        dropSelf(ModBlocks.VERDANT_FENCE_GATE.get());
+        dropSelf(ModBlocks.VERDANT_TRAPDOOR.get());
+
+        add(ModBlocks.VERDANT_DOOR.get(), this::createDoorTable);
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {

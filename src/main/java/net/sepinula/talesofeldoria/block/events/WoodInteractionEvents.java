@@ -22,6 +22,8 @@ public class WoodInteractionEvents {
                 event.setFinalState(ModBlocks.VERDANT_STRIPPED_LOG.get()
                         .withPropertiesOf(state));
             }
+
+
         }
     }
 }

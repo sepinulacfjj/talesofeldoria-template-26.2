@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:verdigris_from_blasting_verdigris_nether_ore"
+        "recipe": "talesofeldoria:verdigris_from_smelting_verdigris_nether_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:verdigris_from_blasting_verdigris_nether_ore"
+      "talesofeldoria:verdigris_from_smelting_verdigris_nether_ore"
     ]
   }
 }

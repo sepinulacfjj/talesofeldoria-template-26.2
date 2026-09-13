@@ -38,6 +38,14 @@ public class ModModelProvider extends ModelProvider {
         blockModels.woodProvider(ModBlocks.VERDANT_LOG.get()).log(ModBlocks.VERDANT_LOG.get());
         blockModels.woodProvider(ModBlocks.VERDANT_STRIPPED_LOG.get()).log(ModBlocks.VERDANT_STRIPPED_LOG.get());
 
-        blockModels.createTrivialCube(ModBlocks.VERDANT_PLANK.get());
+        blockModels.family(ModBlocks.VERDANT_PLANK.get())
+                .stairs(ModBlocks.VERDANT_STAIRS.get())
+                .slab(ModBlocks.VERDANT_SLAB.get())
+                .pressurePlate(ModBlocks.VERDANT_PRESSURE_PLATE.get())
+                .button(ModBlocks.VERDANT_BUTTON.get())
+                .fence(ModBlocks.VERDANT_FENCE.get())
+                .fenceGate(ModBlocks.VERDANT_FENCE_GATE.get())
+                .door(ModBlocks.VERDANT_DOOR.get())
+                .trapdoor(ModBlocks.VERDANT_TRAPDOOR.get());
     }
 }

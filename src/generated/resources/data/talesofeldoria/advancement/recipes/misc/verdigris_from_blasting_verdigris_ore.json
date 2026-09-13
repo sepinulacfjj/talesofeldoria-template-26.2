@@ -3,15 +3,15 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:verdigris_from_smelting_verdigris_deepslate_ore"
+        "recipe": "talesofeldoria:verdigris_from_blasting_verdigris_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
-    "has_verdigris_deepslate_ore": {
+    "has_verdigris_ore": {
       "conditions": {
         "items": [
           {
-            "items": "talesofeldoria:verdigris_deepslate_ore"
+            "items": "talesofeldoria:verdigris_ore"
           }
         ]
       },
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_verdigris_deepslate_ore"
+      "has_verdigris_ore"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:verdigris_from_smelting_verdigris_deepslate_ore"
+      "talesofeldoria:verdigris_from_blasting_verdigris_ore"
     ]
   }
 }

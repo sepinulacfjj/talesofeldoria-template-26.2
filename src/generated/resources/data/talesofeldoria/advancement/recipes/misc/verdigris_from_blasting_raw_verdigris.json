@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:verdigris_from_blasting_raw_verdigris"
+        "recipe": "talesofeldoria:verdigris_from_blasting_raw_verdigris"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:verdigris_from_blasting_raw_verdigris"
+      "talesofeldoria:verdigris_from_blasting_raw_verdigris"
     ]
   }
 }

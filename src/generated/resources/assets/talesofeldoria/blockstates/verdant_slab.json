@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "talesofeldoria:block/verdant_slab"
+    },
+    "type=double": {
+      "model": "talesofeldoria:block/verdant_plank"
+    },
+    "type=top": {
+      "model": "talesofeldoria:block/verdant_slab_top"
+    }
+  }
+}

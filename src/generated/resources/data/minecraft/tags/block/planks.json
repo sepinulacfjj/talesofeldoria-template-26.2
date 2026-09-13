@@ -1,5 +1,13 @@
 {
   "values": [
-    "talesofeldoria:verdant_plank"
+    "talesofeldoria:verdant_plank",
+    "talesofeldoria:verdant_stairs",
+    "talesofeldoria:verdant_slab",
+    "talesofeldoria:verdant_pressure_plate",
+    "talesofeldoria:verdant_button",
+    "talesofeldoria:verdant_fence",
+    "talesofeldoria:verdant_fence_gate",
+    "talesofeldoria:verdant_trapdoor",
+    "talesofeldoria:verdant_door"
   ]
 }

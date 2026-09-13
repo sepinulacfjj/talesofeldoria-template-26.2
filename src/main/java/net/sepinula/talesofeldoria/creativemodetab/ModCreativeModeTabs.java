@@ -40,6 +40,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.VERDANT_LOG);
                         output.accept(ModBlocks.VERDANT_PLANK);
                         output.accept(ModBlocks.VERDANT_STRIPPED_LOG);
+                        output.accept(ModBlocks.VERDANT_STAIRS);
+                        output.accept(ModBlocks.VERDANT_SLAB);
+                        output.accept(ModBlocks.VERDANT_PRESSURE_PLATE);
+                        output.accept(ModBlocks.VERDANT_BUTTON);
+                        output.accept(ModBlocks.VERDANT_FENCE);
+                        output.accept(ModBlocks.VERDANT_FENCE_GATE);
+                        output.accept(ModBlocks.VERDANT_DOOR);
+                        output.accept(ModBlocks.VERDANT_TRAPDOOR);
 
                         //Foods
                         output.accept(ModItems.GOBLIN_EAR);

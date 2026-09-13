@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "talesofeldoria:block/verdant_pressure_plate"
+    },
+    "powered=true": {
+      "model": "talesofeldoria:block/verdant_pressure_plate_down"
+    }
+  }
+}
