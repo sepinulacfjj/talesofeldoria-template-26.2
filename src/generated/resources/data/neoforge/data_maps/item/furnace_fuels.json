@@ -1,0 +1,37 @@
+{
+  "values": {
+    "talesofeldoria:verdant_button": {
+      "burn_time": 100
+    },
+    "talesofeldoria:verdant_door": {
+      "burn_time": 200
+    },
+    "talesofeldoria:verdant_fence": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_fence_gate": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_log": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_plank": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_pressure_plate": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_slab": {
+      "burn_time": 150
+    },
+    "talesofeldoria:verdant_stairs": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_stripped_log": {
+      "burn_time": 300
+    },
+    "talesofeldoria:verdant_trapdoor": {
+      "burn_time": 300
+    }
+  }
+}

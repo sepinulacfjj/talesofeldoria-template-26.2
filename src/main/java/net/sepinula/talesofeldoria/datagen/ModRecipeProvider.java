@@ -105,6 +105,70 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
                 .save(output, TalesOfEldoria.MOD_ID + ":crafting_table_from_verdant_planks");
 
+        // Planks -> Stairs (4)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERDANT_STAIRS.get(), 4)
+                .pattern("A  ")
+                .pattern("AA ")
+                .pattern("AAA")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks -> Slab (6)
+        shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERDANT_SLAB.get(), 6)
+                .pattern("AAA")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks + Sticks -> Fence (3)
+        shaped(RecipeCategory.DECORATIONS, ModBlocks.VERDANT_FENCE.get(), 3)
+                .pattern("W#W")
+                .pattern("W#W")
+                .define('W', ModBlocks.VERDANT_PLANK.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks + Sticks -> Fence Gate (1)
+        shaped(RecipeCategory.REDSTONE, ModBlocks.VERDANT_FENCE_GATE.get())
+                .pattern("#W#")
+                .pattern("#W#")
+                .define('W', ModBlocks.VERDANT_PLANK.get())
+                .define('#', Items.STICK)
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks -> Door (3)
+        shaped(RecipeCategory.REDSTONE, ModBlocks.VERDANT_DOOR.get(), 3)
+                .pattern("AA")
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks -> Trapdoor (2)
+        shaped(RecipeCategory.REDSTONE, ModBlocks.VERDANT_TRAPDOOR.get(), 2)
+                .pattern("AAA")
+                .pattern("AAA")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks -> Pressure Plate (1)
+        shaped(RecipeCategory.REDSTONE, ModBlocks.VERDANT_PRESSURE_PLATE.get())
+                .pattern("AA")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
+        // Planks -> Button (1)
+        shapeless(RecipeCategory.REDSTONE, ModBlocks.VERDANT_BUTTON.get())
+                .requires(ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output);
+
         // --- WOOD SMELTING (CHARCOAL) ---
 
         SimpleCookingRecipeBuilder.smelting(

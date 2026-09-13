@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "A": "talesofeldoria:verdant_plank"
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "id": "talesofeldoria:verdant_pressure_plate"
+  }
+}
