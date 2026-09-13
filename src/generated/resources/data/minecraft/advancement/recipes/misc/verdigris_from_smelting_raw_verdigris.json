@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_verdigris": {
+      "conditions": {
+        "items": [
+          {
+            "items": "talesofeldoria:raw_verdigris"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:verdigris_from_smelting_raw_verdigris"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_raw_verdigris"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:verdigris_from_smelting_raw_verdigris"
+    ]
+  }
+}

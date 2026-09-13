@@ -1,13 +1,16 @@
 {
-  "itemGroup.talesofeldoria": "Example Mod Tab",
-  "block.talesofeldoria.example_block": "Example Block",
-  "item.talesofeldoria.example_item": "Example Item",
+  "item.talesofeldoria.verdigris": "Verdigris",
+  "item.talesofeldoria.raw_verdigris": "Raw Verdigris",
+  "item.talesofeldoria.verdigris_ingot": "Verdigris Ingot",
 
-  "talesofeldoria.configuration.title": "Tales of Eldoria Configs",
-  "talesofeldoria.configuration.section.talesofeldoria.common.toml": "Tales of Eldoria Configs",
-  "talesofeldoria.configuration.section.talesofeldoria.common.toml.title": "Tales of Eldoria Configs",
-  "talesofeldoria.configuration.items": "Item List",
-  "talesofeldoria.configuration.logDirtBlock": "Log Dirt Block",
-  "talesofeldoria.configuration.magicNumberIntroduction": "Magic Number Text",
-  "talesofeldoria.configuration.magicNumber": "Magic Number"
+  "block.talesofeldoria.verdigris_block": "Block of Veldigris",
+  "block.talesofeldoria.raw_verdigris_block": " Raw Block of Veldigris",
+  "block.talesofeldoria.verdigris_ore": "Verdigris Ore",
+  "block.talesofeldoria.verdigris_deepslate_ore": "Verdigris Deepslate Ore",
+  "block.talesofeldoria.verdigris_nether_ore": "Verdigris Nether Ore",
+  "block.talesofeldoria.verdigris_end_ore": "Verdigris End Ore",
+
+
+  "creativetab.talesofeldoria.tales_of_eldoria": "Tales Of Eldoria"
+
 }

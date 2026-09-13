@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "talesofeldoria:raw_verdigris_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "talesofeldoria:blocks/raw_verdigris_block"
+}

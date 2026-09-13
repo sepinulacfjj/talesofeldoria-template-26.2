@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 0.25,
+  "group": "verdigris",
+  "ingredient": "talesofeldoria:raw_verdigris",
+  "result": {
+    "id": "talesofeldoria:verdigris"
+  }
+}

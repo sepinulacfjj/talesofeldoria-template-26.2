@@ -1,5 +1,8 @@
 package net.sepinula.talesofeldoria;
 
+import net.sepinula.talesofeldoria.block.ModBlocks;
+import net.sepinula.talesofeldoria.creativemodetab.ModCreativeModeTabs;
+import net.sepinula.talesofeldoria.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +34,12 @@ public class TalesOfEldoria {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
+
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -44,7 +53,9 @@ public class TalesOfEldoria {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
 
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

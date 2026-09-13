@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "verdigris",
+  "ingredients": [
+    "talesofeldoria:verdigris_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "talesofeldoria:verdigris"
+  }
+}
