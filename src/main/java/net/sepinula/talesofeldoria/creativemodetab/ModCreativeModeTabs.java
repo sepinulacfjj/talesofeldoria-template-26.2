@@ -10,6 +10,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.sepinula.talesofeldoria.TalesOfEldoria;
 import net.sepinula.talesofeldoria.block.ModBlocks;
+import net.sepinula.talesofeldoria.food.ModFoods;
 import net.sepinula.talesofeldoria.item.ModItems;
 
 import java.util.function.Supplier;
@@ -23,16 +24,22 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("creativetab.talesofeldoria.tales_of_eldoria"))
                     .withTabsBefore(CreativeModeTabs.INGREDIENTS)
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        //Items
                         output.accept(ModItems.VERDIGRIS);
                         output.accept(ModItems.RAW_VERDIGRIS);
                         output.accept(ModItems.VERDIGRIS_INGOT);
 
+                        //Blocks
                         output.accept(ModBlocks.VERDIGRIS_BLOCK);
                         output.accept(ModBlocks.RAW_VERDIGRIS_BLOCK);
                         output.accept(ModBlocks.VERDIGRIS_DEEPSLATE_ORE);
                         output.accept(ModBlocks.VERDIGRIS_END_ORE);
                         output.accept(ModBlocks.VERDIGRIS_ORE);
                         output.accept(ModBlocks.VERDIGRIS_NETHER_ORE);
+
+                        //Foods
+                        output.accept(ModItems.GOBLIN_EAR);
 
 
                     }).build());
