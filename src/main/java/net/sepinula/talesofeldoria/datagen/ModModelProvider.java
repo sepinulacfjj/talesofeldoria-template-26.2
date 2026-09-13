@@ -4,6 +4,7 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.data.PackOutput;
 import net.sepinula.talesofeldoria.TalesOfEldoria;
 import net.sepinula.talesofeldoria.block.ModBlocks;
@@ -25,9 +26,7 @@ public class ModModelProvider extends ModelProvider {
         // Foods
         itemModels.generateFlatItem(ModItems.GOBLIN_EAR.get(), ModelTemplates.FLAT_ITEM);
 
-
-
-        // Blocks
+        // Ores
         blockModels.createTrivialCube(ModBlocks.VERDIGRIS_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.RAW_VERDIGRIS_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.VERDIGRIS_ORE.get());
@@ -35,6 +34,10 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createTrivialCube(ModBlocks.VERDIGRIS_NETHER_ORE.get());
         blockModels.createTrivialCube(ModBlocks.VERDIGRIS_END_ORE.get());
 
+        // Wood
+        blockModels.woodProvider(ModBlocks.VERDANT_LOG.get()).log(ModBlocks.VERDANT_LOG.get());
+        blockModels.woodProvider(ModBlocks.VERDANT_STRIPPED_LOG.get()).log(ModBlocks.VERDANT_STRIPPED_LOG.get());
 
+        blockModels.createTrivialCube(ModBlocks.VERDANT_PLANK.get());
     }
 }

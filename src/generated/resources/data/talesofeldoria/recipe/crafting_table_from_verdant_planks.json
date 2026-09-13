@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": "talesofeldoria:verdant_plank"
+  },
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "result": {
+    "id": "minecraft:crafting_table"
+  }
+}

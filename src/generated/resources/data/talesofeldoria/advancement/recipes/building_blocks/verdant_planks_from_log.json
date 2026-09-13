@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "talesofeldoria:verdant_planks_from_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_verdant_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "talesofeldoria:verdant_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_verdant_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "talesofeldoria:verdant_planks_from_log"
+    ]
+  }
+}

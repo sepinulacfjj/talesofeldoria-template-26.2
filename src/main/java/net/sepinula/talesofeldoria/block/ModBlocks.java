@@ -23,26 +23,23 @@ public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(TalesOfEldoria.MOD_ID);
 
-    public static final DeferredBlock<Block> VERDIGRIS_BLOCK = registerBlock("verdigris_block",
-            properties -> new Block(properties.strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
-    public static final DeferredBlock<Block> RAW_VERDIGRIS_BLOCK = registerBlock("raw_verdigris_block",
-            properties -> new Block(properties.strength(4f)
-                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    // Wood
+    public static final DeferredBlock<Block> VERDANT_LOG = registerBlock("verdant_log", properties -> new RotatedPillarBlock(properties.strength(2.0f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> VERDANT_STRIPPED_LOG = registerBlock("verdant_stripped_log", properties -> new RotatedPillarBlock(properties.strength(2.0f).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> VERDANT_PLANK = registerBlock("verdant_plank", properties -> new Block(properties.strength(2.0f, 3.0f).sound(SoundType.WOOD)));
 
-    public static final DeferredBlock<Block> VERDIGRIS_ORE = registerBlock("verdigris_ore",
-            properties -> new DropExperienceBlock(UniformInt.of(2, 4), properties.strength(3f)
-                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
-    public static final DeferredBlock<Block> VERDIGRIS_DEEPSLATE_ORE = registerBlock("verdigris_deepslate_ore",
-            properties -> new DropExperienceBlock(UniformInt.of(3, 5), properties.strength(5f)
-                    .requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
-    public static final DeferredBlock<Block> VERDIGRIS_NETHER_ORE = registerBlock("verdigris_nether_ore",
-            (properties) -> new DropExperienceBlock(UniformInt.of(1, 5),
-                    properties.strength(3f).requiresCorrectToolForDrops()));
-    public static final DeferredBlock<Block> VERDIGRIS_END_ORE = registerBlock("verdigris_end_ore",
-            (properties) -> new DropExperienceBlock(UniformInt.of(5, 9),
-                    properties.strength(7f).requiresCorrectToolForDrops()));
+    // Ore Blocks
+    public static final DeferredBlock<Block> VERDIGRIS_BLOCK = registerBlock("verdigris_block", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    //Overworld Ores
+    public static final DeferredBlock<Block> VERDIGRIS_ORE = registerBlock("verdigris_ore", properties -> new DropExperienceBlock(UniformInt.of(2, 4), properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> VERDIGRIS_DEEPSLATE_ORE = registerBlock("verdigris_deepslate_ore", properties -> new DropExperienceBlock(UniformInt.of(3, 5), properties.strength(5f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+    public static final DeferredBlock<Block> RAW_VERDIGRIS_BLOCK = registerBlock("raw_verdigris_block", properties -> new Block(properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    //Other Dimension Ores
+    public static final DeferredBlock<Block> VERDIGRIS_NETHER_ORE = registerBlock("verdigris_nether_ore", (properties) -> new DropExperienceBlock(UniformInt.of(1, 5), properties.strength(3f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> VERDIGRIS_END_ORE = registerBlock("verdigris_end_ore", (properties) -> new DropExperienceBlock(UniformInt.of(5, 9), properties.strength(7f).requiresCorrectToolForDrops()));
 
 
 

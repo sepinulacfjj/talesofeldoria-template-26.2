@@ -26,6 +26,13 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        //Wood
+        dropSelf(ModBlocks.VERDANT_LOG.get());
+        dropSelf(ModBlocks.VERDANT_PLANK.get());
+        dropSelf(ModBlocks.VERDANT_STRIPPED_LOG.get());
+
+
+        //Ores
         dropSelf(ModBlocks.VERDIGRIS_BLOCK.get());
         dropSelf(ModBlocks.RAW_VERDIGRIS_BLOCK.get());
 

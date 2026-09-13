@@ -37,6 +37,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.VERDIGRIS_END_ORE);
                         output.accept(ModBlocks.VERDIGRIS_ORE);
                         output.accept(ModBlocks.VERDIGRIS_NETHER_ORE);
+                        output.accept(ModBlocks.VERDANT_LOG);
+                        output.accept(ModBlocks.VERDANT_PLANK);
+                        output.accept(ModBlocks.VERDANT_STRIPPED_LOG);
 
                         //Foods
                         output.accept(ModItems.GOBLIN_EAR);

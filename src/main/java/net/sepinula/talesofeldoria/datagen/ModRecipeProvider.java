@@ -7,10 +7,10 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.sepinula.talesofeldoria.block.ModBlocks;
 import net.sepinula.talesofeldoria.item.ModItems;
 
@@ -40,6 +40,65 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
+        // --- WOOD CRAFTING ---
+
+        // 1. Log -> 4 Planks
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERDANT_PLANK.get(), 4)
+                .requires(ModBlocks.VERDANT_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_LOG.get()), has(ModBlocks.VERDANT_LOG.get()))
+                .group("planks")
+                .save(output, "talesofeldoria:verdant_planks_from_log");
+
+        // 2. Stripped Log -> 4 Planks
+        shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERDANT_PLANK.get(), 4)
+                .requires(ModBlocks.VERDANT_STRIPPED_LOG.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_STRIPPED_LOG.get()), has(ModBlocks.VERDANT_STRIPPED_LOG.get()))
+                .group("planks")
+                .save(output, "talesofeldoria:verdant_planks_from_stripped_log");
+
+        // 3. Planks -> Sticks
+        shaped(RecipeCategory.MISC, Items.STICK, 4)
+                .pattern("A")
+                .pattern("A")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .group("sticks")
+                .save(output, "talesofeldoria:sticks_from_verdant_planks");
+
+        // 4. Planks -> Crafting Table
+        shaped(RecipeCategory.DECORATIONS, Blocks.CRAFTING_TABLE)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.VERDANT_PLANK.get())
+                .unlockedBy(getHasName(ModBlocks.VERDANT_PLANK.get()), has(ModBlocks.VERDANT_PLANK.get()))
+                .save(output, "talesofeldoria:crafting_table_from_verdant_planks");
+
+        // --- WOOD SMELTING (CHARCOAL) ---
+
+        // 5. Log -> Charcoal
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(ModBlocks.VERDANT_LOG.get()),
+                        RecipeCategory.MISC,
+                        CookingBookCategory.MISC,
+                        Items.CHARCOAL,
+                        0.15f,
+                        200
+                ).unlockedBy(getHasName(ModBlocks.VERDANT_LOG.get()), has(ModBlocks.VERDANT_LOG.get()))
+                .save(output, "talesofeldoria:charcoal_from_verdant_log");
+
+// 6. Stripped Log -> Charcoal
+        SimpleCookingRecipeBuilder.smelting(
+                        Ingredient.of(ModBlocks.VERDANT_STRIPPED_LOG.get()),
+                        RecipeCategory.MISC,
+                        CookingBookCategory.MISC,
+                        Items.CHARCOAL,
+                        0.15f,
+                        200
+                ).unlockedBy(getHasName(ModBlocks.VERDANT_STRIPPED_LOG.get()), has(ModBlocks.VERDANT_STRIPPED_LOG.get()))
+                .save(output, "talesofeldoria:charcoal_from_verdant_stripped_log");
+
+        // --- VERDIGRIS RECIPES ---
+
         shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.VERDIGRIS_BLOCK.get())
                 .pattern("AAA")
                 .pattern("AAA")
@@ -62,10 +121,10 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("verdigris")
                 .save(output, "talesofeldoria:verdigris_from_blaze_powder");
 
-        List<ItemLike> AZURITE_SMELTABLES = List.of(ModItems.RAW_VERDIGRIS, ModBlocks.VERDIGRIS_ORE,
+        List<ItemLike> VERDIGRIS_SMELTABLES = List.of(ModItems.RAW_VERDIGRIS, ModBlocks.VERDIGRIS_ORE,
                 ModBlocks.VERDIGRIS_DEEPSLATE_ORE, ModBlocks.VERDIGRIS_NETHER_ORE, ModBlocks.VERDIGRIS_END_ORE);
 
-        oreSmelting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.VERDIGRIS.get(), 0.25f, 200, "verdigris");
-        oreBlasting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.VERDIGRIS.get(), 0.25f, 100, "verdigris");
-        }
+        oreSmelting(VERDIGRIS_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.VERDIGRIS.get(), 0.25f, 200, "verdigris");
+        oreBlasting(VERDIGRIS_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.VERDIGRIS.get(), 0.25f, 100, "verdigris");
     }
+}
